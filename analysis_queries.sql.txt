@@ -1,0 +1,7 @@
+Percentage Under Min Wage
+
+SELECT
+  COUNT(*) AS `Total Sampled`,
+  COUNTIF(`Hourly Rate`  < 16.50) AS `Total Under Min Wage`,
+  ROUND(COUNTIF(`Hourly Rate`  < 16.50) / COUNT(*) * 100, 2) AS `Percentage Under Min Wage
+FROM `pay-errors.min_wage.min_wage_data`
